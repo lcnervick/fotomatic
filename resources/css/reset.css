@@ -1,0 +1,363 @@
+/* Universal Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: 16px;
+  background-color: #c6c1c1;
+}
+
+main {
+  margin-top:85px;
+  width:100%;
+}
+
+.center {
+  text-align:center;
+  margin-left:auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+img {
+  width: 100%;
+}
+
+
+/*  HEADER  */
+header {
+  position: fixed;
+  top: 0px;
+  height: 85px;
+  width: 100%;
+  z-index: 5;
+  background-color:white;
+}
+header .content {
+  height: 100%;
+  width:100%;
+  padding: 0 30px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile {
+  display: none;
+}
+
+.join-button {
+  flex: 0 0 auto;
+  display:none;
+  margin-left: 30px;
+  background-color: #9dc20a;
+  border-radius: 4px;
+  padding: 0.5em;
+  color:white;
+  text-decoration: none;
+}
+
+header .logo {
+  flex: 0 0 auto;
+  color: #4a4a4a;
+  font-size: 1.5rem;
+  font-family: monospace;
+  margin-right: 30px;
+}
+
+nav {
+  flex: 1 0 auto;
+  display:grid;
+  gap: 30px;
+  grid-auto-flow: column;
+  text-align: right;
+}
+
+nav li {
+  display:inline;
+}
+
+nav li+li::before {
+  content: '';
+  margin-left: 50px;
+}
+
+nav a {
+  color: #4a4a4a;
+  font-size: 1rem;
+  font-family: 'Roboto';
+  text-decoration: none;
+}
+
+nav .icon {
+  height:1em;
+  width: auto;
+  margin-left:10px;
+}
+
+
+header img {
+  height: 100%;
+  width: auto;
+}
+
+nav.mobile ul {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-evenly;
+}
+
+
+/* Sign-Up Section */
+
+
+#sign-up-section {
+  display:grid;
+  align-items: center;
+  justify-content:start;
+  background-image: url('../images/banner-landingpage.jpg');
+  background-size: cover;
+  background-position-x: right;
+}
+
+#sign-up-section .content {
+  width:568px;
+  padding: 32px 80px 56px 80px;
+  margin: 170px 0px 170px 100px;
+  background-color: #9dc20a;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  line-height: 1.4;
+  color: white;
+}
+
+#sign-up-section h1 {
+  font-size: 3rem;
+  font-family: 'Rubik';
+}
+
+#sign-up-section h2 {
+  font-family: 'Damion';
+  font-weight: normal;
+  font-size: 2.25em;
+}
+
+#sign-up-section .email {
+  margin-top: 12px;
+  font-size: 1.25rem;
+}
+
+#sign-up-section .button {
+  display: grid;
+  height: 64px;
+  margin-top: 26px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  background-color: #4a4a4a;
+  border-radius: 4px;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+/* Features Section */
+
+#features-section {
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+  padding: 64px;
+  gap:38px;
+}
+
+#features-section .feature {
+  background-color: white;
+  padding: 32px;
+}
+
+#features-section figcaption {
+  padding-top: 40px;
+  min-height: 187px;
+  line-height: 1.2;
+}
+
+
+
+/*  Filters Section  */
+
+#filters-section {
+  display: grid;
+  align-items: center;
+  padding: 64px 1%;
+  background-color: #4a4a4a;
+  gap: 80px 0px;
+  color: white;
+}
+
+#filters-section .images-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+/*  Filters Section  */
+
+#quotes-section .content {
+  display:grid;
+  padding: 80px 1%;
+  justify-content: center;
+  align-items: center;
+  grid-auto-flow: column;
+  gap: 30px;
+  font-size: 1.875rem;
+}
+
+#quotes-section .quote {
+  font-family: 'Damion', cursive;
+  line-height: 1.1;
+}
+
+#quotes-section .quote-citation {
+  height: 1em;
+  width: auto;
+}
+
+
+/*  Filters Section  */
+
+
+footer {
+  background-color: #4a4a4a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+  font-size: 0.75rem;
+  color:white;
+  padding: 0px 32px;
+}
+
+
+/*  TABLET MODE */
+@media only screen and (max-width: 900px) {
+
+  nav li+li::before {
+    margin-left: 20px;
+  }
+  
+  .join-button {
+    display: inline-block;
+  }
+
+  #sign-up-section {
+    justify-content: center;
+  }
+
+  #sign-up-section .email, #sign-up-section .button {
+    display:none;
+  }
+
+  #sign-up-section .content {
+    background-color: transparent;
+    border:none;
+    margin: 170px auto;
+    width:auto;
+  }
+
+  #features-section .feature {
+    padding: 16px 16px 30px 16px;
+  }
+
+  #features-section figcaption {
+    padding-top: 20px;
+    min-height: auto;
+  }
+
+}
+
+@media only screen and (max-width: 630px) {
+
+  .mobile {
+    display: inline-block;
+    flex: 1 1 auto;
+  }
+  nav.mobile {
+    display:grid;
+  }
+
+  nav.desktop, .logo.desktop {
+    display: none;
+  }
+
+  main {
+    margin-top: 48px;
+  }
+
+  header {
+    height: 48px;
+  }
+
+  header .logo {
+    height: 1em;
+  }
+
+  #sign-up-section .content {
+    margin:50px auto;
+  }
+
+  #features-section {
+    grid-auto-flow: row;
+    padding: 0;
+    gap: 0;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  h3 {
+    font-size: 0.875rem;
+  }
+
+  #filters-section {
+    padding: 32px 0px 0px 0px;
+    gap: 32px;
+  }
+
+  #filters-section .images-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .extra {
+    display:none;
+  }
+
+  .quote {
+    font-size: 1.5rem;
+  }
+
+  #quotes-section .content {
+    grid-auto-flow: row;
+    justify-items: center;
+    padding: 40px 1%;
+  }
+
+  footer {
+    font-size: 0.625rem;
+  }
+}
